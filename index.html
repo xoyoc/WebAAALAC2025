@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AAALAC - Asociación de Agentes Aduanales de Lázaro Cárdenas</title>
+        <meta name="description" content="Asociación de Agentes Aduanales de Lázaro Cárdenas. Servicios profesionales de comercio exterior desde 1990.">
+        <meta name="keywords" content="agentes aduanales, comercio exterior, Lázaro Cárdenas, importación, exportación">
+        
+        <!-- Preload critical resources -->
+        <link rel="preload" href="https://cdn.tailwindcss.com" as="style">
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    
+    <body class="bg-white text-gray-800 antialiased">
+        <!-- Enhanced loader with animation -->
+        <div id="loader" class="fixed inset-0 bg-white z-50 flex items-center justify-center transition-opacity duration-500">
+            <div class="relative">
+                <div class="w-16 h-16 border-4 border-gray-200 border-t-blue-900 rounded-full animate-spin"></div>
+                <div class="absolute inset-0 w-16 h-16 border-4 border-transparent border-r-blue-600 rounded-full animate-spin" style="animation-delay: -0.15s;"></div>
+            </div>
+        </div>
+        
+        <!-- Enhanced Header/Navigation -->
+        <header class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-40 transition-all duration-300" id="navbar">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center h-20">
+                    <!-- Logo with enhanced animation -->
+                    <div class="flex items-center space-x-3 animate-fade-in-left">
+                        <div class="w-14 h-14 rounded-lg flex items-center justify-center hover-lift">
+                            <img class="w-full h-full object-contain" src="./img/Isotipo.png" alt="Isotipo de AAALAC" loading="eager">
+                        </div>
+                        <div>
+                            <h1 class="text-xl font-bold text-gray-900">Asociación</h1>
+                            <p class="text-xs text-gray-600">Agentes Aduanales de Lázaro Cárdenas</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Enhanced Desktop Navigation -->
+                    <nav class="hidden lg:flex items-center space-x-8">
+                        <a href="#inicio" class="nav-link text-gray-700 hover:text-blue-900 font-medium">Inicio</a>
+                        <a href="#nosotros" class="nav-link text-gray-700 hover:text-blue-900 font-medium">Nosotros</a>
+                        <a href="#servicios" class="nav-link text-gray-700 hover:text-blue-900 font-medium">Servicios</a>
+                        <a href="#requisitos" class="nav-link text-gray-700 hover:text-blue-900 font-medium">Requisitos</a>
+                        <a href="#asociados" class="nav-link text-gray-700 hover:text-blue-900 font-medium">Asociados</a>
+                        <a href="#contacto" class="nav-link text-gray-700 hover:text-blue-900 font-medium">Contacto</a>
+                        <a href="https://plataforma.aaalac.mx" target="_blank" class="btn ml-4 px-5 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 focus:ring-primary">
+                            <i class="fas fa-external-link-alt mr-2"></i>Plataforma
+                        </a>
+                    </nav>
+                    
+                    <!-- Enhanced Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="lg:hidden text-gray-700 text-2xl hover:text-blue-900 transition-colors" aria-label="Menu">
+                        <i class="fas fa-bars" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Enhanced Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-200">
+                <div class="container mx-auto px-4 py-4 space-y-3">
+                    <a href="#inicio" class="block text-gray-700 hover:text-blue-900 font-medium py-2 transition-colors">Inicio</a>
+                    <a href="#nosotros" class="block text-gray-700 hover:text-blue-900 font-medium py-2 transition-colors">Nosotros</a>
+                    <a href="#servicios" class="block text-gray-700 hover:text-blue-900 font-medium py-2 transition-colors">Servicios</a>
+                    <a href="#requisitos" class="block text-gray-700 hover:text-blue-900 font-medium py-2 transition-colors">Requisitos</a>
+                    <a href="#asociados" class="block text-gray-700 hover:text-blue-900 font-medium py-2 transition-colors">Asociados</a>
+                    <a href="#contacto" class="block text-gray-700 hover:text-blue-900 font-medium py-2 transition-colors">Contacto</a>
+                    <a href="https://plataforma.aaalac.mx" target="_blank" class="btn block w-full text-center px-5 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-800 focus:ring-primary">
+                        <i class="fas fa-external-link-alt mr-2"></i>Acceder a Plataforma
+                    </a>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Enhanced Hero Section -->
+        <section id="inicio" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+            <!-- Enhanced Background -->
+            <div class="absolute inset-0 pattern-dots opacity-30"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent"></div>
+            
+            <!-- Floating elements for visual appeal -->
+            <div class="absolute top-20 right-10 w-20 h-20 bg-blue-200/30 rounded-full animate-float"></div>
+            <div class="absolute bottom-20 left-10 w-32 h-32 bg-blue-300/20 rounded-full animate-float" style="animation-delay: -1s;"></div>
+            
+            <!-- Content -->
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Enhanced Text Section -->
+                    <div class="space-y-6">
+                        <div class="inline-block animate-fade-in-up">
+                            <span class="text-sm font-semibold text-blue-900 bg-blue-50 px-4 py-2 rounded-full border border-blue-200">
+                                Desde 1990 • Puerto de Lázaro Cárdenas
+                            </span>
+                        </div>
+                        
+                        <h1 class="text-responsive-lg font-bold text-gray-900 leading-tight animate-fade-in-up delay-100">
+                            Asociación de Agentes
+                            <span class="gradient-text block"> Aduanales Lázaro Cárdenas</span>
+                        </h1>
+                        
+                        <p class="text-lg text-gray-600 leading-relaxed animate-fade-in-up delay-200">
+                            Representamos y apoyamos a nuestros agremiados ante las autoridades y organismos empresariales que intervienen en el despacho aduanero, garantizando eficiencia y profesionalismo en cada operación.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
+                            <button onclick="scrollToSection('requisitos')" class="btn px-8 py-4 bg-blue-900 text-white rounded-lg font-semibold hover:bg-blue-800 hover-lift focus:ring-primary">
+                                Únete a AAALAC
+                            </button>
+                            <button onclick="scrollToSection('servicios')" class="btn px-8 py-4 border-2 border-blue-900 text-blue-900 rounded-lg font-semibold hover:bg-blue-50 transition-colors focus:ring-primary">
+                                Nuestros Servicios
+                            </button>
+                        </div>
+                        
+                        <!-- Enhanced Statistics -->
+                        <div class="grid grid-cols-3 gap-4 pt-8 border-t border-gray-200 animate-fade-in-up delay-500">
+                            <div class="text-center hover-lift">
+                                <div class="counter text-3xl font-bold text-blue-900" data-target="70">0</div>
+                                <div class="text-sm text-gray-600">Agencias Asociadas</div>
+                            </div>
+                            <div class="text-center hover-lift">
+                                <div class="counter text-3xl font-bold text-blue-900" data-target="35">0</div>
+                                <div class="text-sm text-gray-600">Años de Experiencia</div>
+                            </div>
+                            <div class="text-center hover-lift">
+                                <div class="text-3xl font-bold text-blue-900">24/7</div>
+                                <div class="text-sm text-gray-600">Operaciones</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Enhanced Visual Section -->
+                    <div class="relative animate-fade-in-right delay-200">
+                        <div class="relative will-change-transform">
+                            <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-xl border border-blue-200/50">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <!-- Service cards with enhanced animations -->
+                                    <div class="card p-4 hover-glow animate-scale-in delay-75">
+                                        <i class="fas fa-ship text-3xl text-blue-900 mb-2 animate-float"></i>
+                                        <h3 class="font-semibold text-sm">Importación</h3>
+                                    </div>
+                                    <div class="card p-4 hover-glow animate-scale-in delay-150">
+                                        <i class="fas fa-truck text-3xl text-green-600 mb-2 animate-float" style="animation-delay: -0.5s;"></i>
+                                        <h3 class="font-semibold text-sm">Exportación</h3>
+                                    </div>
+                                    <div class="card p-4 hover-glow animate-scale-in delay-200">
+                                        <i class="fas fa-file-alt text-3xl text-purple-600 mb-2 animate-float" style="animation-delay: -1s;"></i>
+                                        <h3 class="font-semibold text-sm">Despacho</h3>
+                                    </div>
+                                    <div class="card p-4 hover-glow animate-scale-in delay-300">
+                                        <i class="fas fa-shield-alt text-3xl text-orange-600 mb-2 animate-float" style="animation-delay: -1.5s;"></i>
+                                        <h3 class="font-semibold text-sm">Cumplimiento</h3>
+                                    </div>
+                                </div>
+                                
+                                <!-- Central logo with pulse animation -->
+                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <div class="w-24 h-24 bg-white rounded-full shadow-2xl flex items-center justify-center animate-pulse-soft">
+                                        <i class="fas fa-anchor text-4xl text-blue-900"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Enhanced decoration -->
+                            <div class="absolute -top-4 -right-4 w-20 h-20 bg-blue-200/30 rounded-full animate-float"></div>
+                            <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-300/20 rounded-full animate-float" style="animation-delay: -1.5s;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Enhanced Trust Bar -->
+        <section class="py-8 bg-gray-50 border-y border-gray-200">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap items-center justify-center gap-8 text-center">
+                    <div class="flex items-center gap-2 text-gray-600 hover:text-blue-900 transition-colors hover-lift">
+                        <i class="fas fa-certificate text-blue-900 text-xl"></i>
+                        <span class="text-sm font-medium">ISO 9001:2015</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 hover:text-blue-900 transition-colors hover-lift">
+                        <i class="fas fa-award text-blue-900 text-xl"></i>
+                        <span class="text-sm font-medium">Miembro CAAAREM</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 hover:text-blue-900 transition-colors hover-lift">
+                        <i class="fas fa-globe-americas text-blue-900 text-xl"></i>
+                        <span class="text-sm font-medium">Comercio Internacional</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 hover:text-blue-900 transition-colors hover-lift">
+                        <i class="fas fa-handshake text-blue-900 text-xl"></i>
+                        <span class="text-sm font-medium">Alianzas Estratégicas</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Enhanced CTA Section -->
+        <section class="py-16 gradient-primary relative overflow-hidden">
+            <!-- Background decoration -->
+            <div class="absolute inset-0 bg-blue-900/10"></div>
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full transform translate-x-32 -translate-y-32"></div>
+            
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h2 class="text-3xl font-bold text-white mb-4 animate-fade-in-up">
+                    ¿Necesitas servicios aduanales profesionales?
+                </h2>
+                <p class="text-blue-100 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-100">
+                    Nuestros asociados están listos para brindarte el mejor servicio en importación y exportación
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-200">
+                    <a href="#contacto" class="btn px-8 py-3 bg-white text-blue-900 rounded-lg font-semibold hover:bg-gray-100 hover-lift focus:ring-primary">
+                        Contactar Ahora
+                    </a>
+                    <a href="https://plataforma.aaalac.mx/publicidad/" target="_blank" class="btn px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-all focus:ring-primary">
+                        Ver Directorio
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Nosotros Section - Enhanced -->
+        <section id="nosotros" class="pt-32 pb-16 bg-gradient-to-br from-blue-50 to-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 animate-fade-in-up">
+                        Conoce Nuestra <span class="gradient-text">Asociación</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 leading-relaxed animate-fade-in-up delay-100">
+                        Más de 35 años representando y fortaleciendo al gremio de agentes aduanales en el puerto más importante del Pacífico mexicano.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Enhanced About Introduction -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6 animate-fade-in-left">
+                        <div class="inline-block">
+                            <span class="text-sm font-semibold text-blue-900 bg-blue-100 px-4 py-2 rounded-full border border-blue-200">
+                                <i class="fas fa-award mr-2"></i>Excelencia desde 1990
+                            </span>
+                        </div>
+                        
+                        <h2 class="text-3xl font-bold text-gray-900">
+                            Líderes en Servicios Aduanales
+                        </h2>
+                        
+                        <p class="text-gray-600 leading-relaxed">
+                            La Asociación de Agentes Aduanales de Lázaro Cárdenas es una organización conformada por profesionales especializados en comercio exterior, comprometidos con el desarrollo y crecimiento del puerto de Lázaro Cárdenas.
+                        </p>
+                        
+                        <p class="text-gray-600 leading-relaxed">
+                            Trabajamos de manera coordinada para crear una red sólida que ofrece servicios de la más alta calidad, optimizando los procesos de importación y exportación para nuestros clientes.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-check-circle text-green-600"></i>
+                                <span class="text-gray-700">ISO 9001:2015</span>
+                            </div>
+                            <div class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-check-circle text-green-600"></i>
+                                <span class="text-gray-700">Miembro CAAAREM</span>
+                            </div>
+                            <div class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-check-circle text-green-600"></i>
+                                <span class="text-gray-700">Certificación OEA</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative animate-fade-in-right">
+                        <div class="relative rounded-2xl overflow-hidden shadow-xl hover-lift">
+                            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600" 
+                            alt="Puerto de Lázaro Cárdenas" 
+                            class="w-full h-96 object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+                                <div class="absolute bottom-6 left-6 text-white">
+                                    <i class="fas fa-play-circle text-4xl mb-2"></i>
+                                    <p class="font-semibold">Ver Video Institucional</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Estadística flotante mejorada -->
+                        <div class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 hover-lift animate-scale-in delay-300 border border-gray-100">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-users text-blue-900 text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="counter text-2xl font-bold text-gray-900" data-target="70">0</div>
+                                    <div class="text-sm text-gray-600">Agencias Asociadas</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Misión, Visión y Valores - Mejorada -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4 animate-fade-in-up">
+                        Nuestra Filosofía Institucional
+                    </h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto animate-fade-in-up delay-100">
+                        Principios que guían nuestro compromiso con la excelencia en servicios aduanales
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Misión -->
+                    <div class="card p-8 hover-glow hover-lift animate-scale-in">
+                        <div class="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mb-6 mx-auto animate-float">
+                            <i class="fas fa-bullseye text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Misión</h3>
+                        <p class="text-gray-600 text-center leading-relaxed">
+                            Representar y apoyar a nuestros agremiados ante las autoridades y organismos empresariales, optimizando los procesos de importación y exportación mediante servicios de calidad y tecnología avanzada.
+                        </p>
+                    </div>
+                    
+                    <!-- Visión -->
+                    <div class="card p-8 hover-glow hover-lift animate-scale-in delay-100">
+                        <div class="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mb-6 mx-auto animate-float" style="animation-delay: -0.5s;">
+                            <i class="fas fa-eye text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Visión</h3>
+                        <p class="text-gray-600 text-center leading-relaxed">
+                            Ser la mejor asociación a nivel nacional que represente al agente aduanal ante los diferentes actores de la cadena logística, liderando la innovación en procesos aduaneros.
+                        </p>
+                    </div>
+                    
+                    <!-- Valores -->
+                    <div class="card p-8 hover-glow hover-lift animate-scale-in delay-200">
+                        <div class="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mb-6 mx-auto animate-float" style="animation-delay: -1s;">
+                            <i class="fas fa-heart text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Valores</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-check text-blue-600 text-sm"></i>
+                                <span>Integridad y transparencia</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-check text-blue-600 text-sm"></i>
+                                <span>Compromiso profesional</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-check text-blue-600 text-sm"></i>
+                                <span>Innovación continua</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-check text-blue-600 text-sm"></i>
+                                <span>Servicio de excelencia</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Timeline Historia - Mejorada -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4 animate-fade-in-up">
+                        Nuestra Trayectoria
+                    </h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto animate-fade-in-up delay-100">
+                        Más de tres décadas construyendo el futuro del comercio exterior en México
+                    </p>
+                </div>
+                
+                <div class="max-w-4xl mx-auto">
+                    <div class="relative">
+                        <!-- Línea central mejorada -->
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full timeline-line rounded-full"></div>
+                        
+                        <!-- Timeline items mejorados -->
+                        <div class="space-y-16">
+                            <!-- 1990 -->
+                            <div class="timeline-item flex items-center justify-between animate-fade-in-up">
+                                <div class="w-5/12 text-right pr-8">
+                                    <div class="card p-6 hover-lift">
+                                        <h3 class="text-xl font-bold text-gray-900">Fundación</h3>
+                                        <p class="text-gray-600 mt-2">Establecimiento de AAALAC con 12 agencias fundadoras</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-dot w-6 h-6 bg-white border-4 border-blue-900 rounded-full relative z-10 shadow-lg animate-pulse-soft"></div>
+                                <div class="w-5/12 pl-8">
+                                    <span class="text-blue-900 font-bold text-2xl">1990</span>
+                                </div>
+                            </div>
+                            
+                            <!-- 2000 -->
+                            <div class="timeline-item flex items-center justify-between animate-fade-in-up delay-100">
+                                <div class="w-5/12 text-right pr-8">
+                                    <span class="text-blue-900 font-bold text-2xl">2000</span>
+                                </div>
+                                <div class="timeline-dot w-6 h-6 bg-white border-4 border-blue-900 rounded-full relative z-10 shadow-lg"></div>
+                                <div class="w-5/12 pl-8">
+                                    <div class="card p-6 hover-lift">
+                                        <h3 class="text-xl font-bold text-gray-900">Expansión</h3>
+                                        <p class="text-gray-600 mt-2">Crecimiento a 35 agencias asociadas</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 2010 -->
+                            <div class="timeline-item flex items-center justify-between animate-fade-in-up delay-200">
+                                <div class="w-5/12 text-right pr-8">
+                                    <div class="card p-6 hover-lift">
+                                        <h3 class="text-xl font-bold text-gray-900">Certificación ISO</h3>
+                                        <p class="text-gray-600 mt-2">Obtención de certificación ISO 9001</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-dot w-6 h-6 bg-white border-4 border-blue-900 rounded-full relative z-10 shadow-lg"></div>
+                                <div class="w-5/12 pl-8">
+                                    <span class="text-blue-900 font-bold text-2xl">2010</span>
+                                </div>
+                            </div>
+                            
+                            <!-- 2020 -->
+                            <div class="timeline-item flex items-center justify-between animate-fade-in-up delay-300">
+                                <div class="w-5/12 text-right pr-8">
+                                    <span class="text-blue-900 font-bold text-2xl">2020</span>
+                                </div>
+                                <div class="timeline-dot w-6 h-6 bg-white border-4 border-blue-900 rounded-full relative z-10 shadow-lg"></div>
+                                <div class="w-5/12 pl-8">
+                                    <div class="card p-6 hover-lift">
+                                        <h3 class="text-xl font-bold text-gray-900">Digitalización</h3>
+                                        <p class="text-gray-600 mt-2">Lanzamiento de plataforma digital</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 2025 -->
+                            <div class="timeline-item flex items-center justify-between animate-fade-in-up delay-500">
+                                <div class="w-5/12 text-right pr-8">
+                                    <div class="card p-6 hover-lift bg-blue-50 border-blue-200">
+                                        <h3 class="text-xl font-bold text-blue-900">Liderazgo Nacional</h3>
+                                        <p class="text-blue-800 mt-2">70+ agencias, referente en el Pacífico</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-dot w-8 h-8 bg-blue-900 rounded-full relative z-10 shadow-lg animate-pulse-soft">
+                                    <div class="w-4 h-4 bg-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+                                </div>
+                                <div class="w-5/12 pl-8">
+                                    <span class="text-blue-900 font-bold text-2xl">2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compromiso y Responsabilidad -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4 animate-fade-in-up">
+                            Nuestro Compromiso
+                        </h2>
+                        <p class="text-gray-600 max-w-2xl mx-auto animate-fade-in-up delay-100">
+                            Garantizamos seguridad, eficiencia y transparencia en cada operación
+                        </p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Compromiso 1 -->
+                        <div class="text-center group hover-lift">
+                            <div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-100 transition-colors">
+                                <i class="fas fa-shield-alt text-3xl text-blue-900"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-2">Seguridad</h4>
+                            <p class="text-sm text-gray-600">Protección integral de información y operaciones</p>
+                        </div>
+                        
+                        <!-- Compromiso 2 -->
+                        <div class="text-center group hover-lift">
+                            <div class="w-20 h-20 bg-green-50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-100 transition-colors">
+                                <i class="fas fa-handshake text-3xl text-green-700"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-2">Confianza</h4>
+                            <p class="text-sm text-gray-600">Relaciones sólidas y transparentes</p>
+                        </div>
+                        
+                        <!-- Compromiso 3 -->
+                        <div class="text-center group hover-lift">
+                            <div class="w-20 h-20 bg-purple-50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-100 transition-colors">
+                                <i class="fas fa-chart-line text-3xl text-purple-700"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-2">Innovación</h4>
+                            <p class="text-sm text-gray-600">Tecnología de vanguardia en procesos</p>
+                        </div>
+                        
+                        <!-- Compromiso 4 -->
+                        <div class="text-center group hover-lift">
+                            <div class="w-20 h-20 bg-orange-50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-100 transition-colors">
+                                <i class="fas fa-clock text-3xl text-orange-700"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-2">Eficiencia</h4>
+                            <p class="text-sm text-gray-600">Optimización de tiempos y recursos</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Quote destacado -->
+                    <div class="mt-16 bg-gradient-to-r from-blue-900 to-blue-800 rounded-2xl p-8 text-white text-center animate-fade-in-up delay-300">
+                        <i class="fas fa-quote-left text-4xl opacity-50 mb-4"></i>
+                        <p class="text-lg italic mb-4 max-w-3xl mx-auto">
+                            "En AAALAC estamos comprometidos en brindar un óptimo servicio de representación durante la operación aduanera, garantizando la seguridad, continuidad del negocio, integridad y confidencialidad de la información."
+                        </p>
+                        <p class="font-semibold">- Comité Ejecutivo AAALAC</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipo Directivo -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4 animate-fade-in-up">
+                        Comité Ejecutivo
+                    </h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto animate-fade-in-up delay-100">
+                        Liderazgo experimentado comprometido con el desarrollo del gremio
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+                    <!-- Gerente General -->
+                    <div class="text-center animate-scale-in">
+                        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden hover-lift">
+                            <div class="w-full h-full bg-gradient-to-br from-blue-200 to-blue-300 flex items-center justify-center">
+                                <i class="fas fa-user-tie text-4xl text-blue-900"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-gray-900">Lic. Sarahi González García</h4>
+                        <p class="text-sm text-blue-900 font-medium">Gerente General</p>
+                    </div>
+                    
+                    <!-- Presidente Ejecutivo -->
+                    <div class="text-center animate-scale-in delay-100">
+                        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden hover-lift">
+                            <div class="w-full h-full bg-gradient-to-br from-green-200 to-green-300 flex items-center justify-center">
+                                <i class="fas fa-user-tie text-4xl text-green-900"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-gray-900">A.A. Marcelo José Padilla Gomez Tagle</h4>
+                        <p class="text-sm text-gray-600">Presidente Ejecutivo</p>
+                        <p class="text-xs text-gray-600 mt-1">Patente 3203</p>
+                    </div>
+                    
+                    <!-- Tesorero Ejecutivo -->
+                    <div class="text-center animate-scale-in delay-200">
+                        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden hover-lift">
+                            <div class="w-full h-full bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center">
+                                <i class="fas fa-user-tie text-4xl text-purple-900"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-gray-900">A.A. Roberto José Ramos Casas</h4>
+                        <p class="text-sm text-gray-600">Tesorero Ejecutivo</p>
+                        <p class="text-xs text-gray-600 mt-1">Patente 3037</p>
+                    </div>
+                    
+                    <!-- Secretario Ejecutivo -->
+                    <div class="text-center animate-scale-in delay-300">
+                        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden hover-lift">
+                            <div class="w-full h-full bg-gradient-to-br from-orange-200 to-orange-300 flex items-center justify-center">
+                                <i class="fas fa-user-tie text-4xl text-orange-900"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-gray-900">A.A. José Hugo Herrera Mier</h4>
+                        <p class="text-sm text-gray-600">Secretario Ejecutivo</p>
+                        <p class="text-xs text-gray-600 mt-1">Patente 3178</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Servicios - Mejorado -->
+        <section id="servicios" class="pt-32 pb-16 pattern-dots bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-4xl mx-auto">
+                    <div class="inline-block mb-4 animate-fade-in-up">
+                        <span class="text-sm font-semibold text-blue-900 bg-blue-50 px-4 py-2 rounded-full border border-blue-200">
+                            <i class="fas fa-award mr-2"></i>Servicios Certificados ISO 9001:2015
+                        </span>
+                    </div>
+                    <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 animate-fade-in-up delay-100">
+                        Servicios <span class="gradient-text">Aduanales Integrales</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 leading-relaxed animate-fade-in-up delay-200">
+                        Ofrecemos soluciones completas para optimizar sus operaciones de comercio exterior, 
+                        garantizando eficiencia, seguridad y cumplimiento normativo en cada proceso.
+                    </p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Servicios Principales -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4 animate-fade-in-up">Servicios Incluidos en la Cuota Social</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto animate-fade-in-up delay-100">
+                        Representación, comunicación y beneficios gremiales para todos nuestros asociados
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Servicio 1 -->
+                    <div class="card p-6 hover-glow hover-lift animate-scale-in">
+                        <div class="w-14 h-14 gradient-primary rounded-lg flex items-center justify-center mb-4 animate-float">
+                            <i class="fas fa-handshake text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Representación Institucional</h3>
+                        <p class="text-gray-600 mb-4">
+                            Representación ante autoridades, cámaras industriales y la Confederación (CAAAREM).
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-blue-600 text-xs"></i>
+                                <span>ANAM, SADER, PROFEPA</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-blue-600 text-xs"></i>
+                                <span>ASIPONA, MARINA</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-blue-600 text-xs"></i>
+                                <span>AMANAC, ATLAC, CCE, COMCE</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-blue-600 text-xs"></i>
+                                <span>CAAAREM</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Servicio 2 -->
+                    <div class="card p-6 hover-glow hover-lift animate-scale-in delay-100">
+                        <div class="w-14 h-14 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center mb-4 animate-float" style="animation-delay: -0.5s;">
+                            <i class="fas fa-chart-line text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Gestión y Promoción</h3>
+                        <p class="text-gray-600 mb-4">
+                            Participación activa en comités portuarios, ferias y exposiciones para el sector.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-green-600 text-xs"></i>
+                                <span>Comités portuarios</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-green-600 text-xs"></i>
+                                <span>Ferias y exposiciones</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-green-600 text-xs"></i>
+                                <span>Port Community System</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-green-600 text-xs"></i>
+                                <span>Resolución de problemáticas</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Servicio 3 -->
+                    <div class="card p-6 hover-glow hover-lift animate-scale-in delay-200">
+                        <div class="w-14 h-14 bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg flex items-center justify-center mb-4 animate-float" style="animation-delay: -1s;">
+                            <i class="fas fa-bullhorn text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Comunicación e Información</h3>
+                        <p class="text-gray-600 mb-4">
+                            Información actualizada y relevante para mantenerte al día en el sector aduanal.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-purple-600 text-xs"></i>
+                                <span>Boletines y comunicados</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-purple-600 text-xs"></i>
+                                <span>Extractos del DOF</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-purple-600 text-xs"></i>
+                                <span>Reporte de fondeo y atraque</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-purple-600 text-xs"></i>
+                                <span>Informes mensuales</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Separador mejorado -->
+                <div class="my-16 text-center">
+                    <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-900 rounded-full mx-auto mb-6"></div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Servicios de Valor Agregado</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Gestión operativa, asesoría especializada y soporte técnico para optimizar tus operaciones
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Servicios adicionales -->
+                    <div class="card p-6 hover-glow hover-lift animate-scale-in delay-300">
+                        <div class="w-14 h-14 bg-gradient-to-br from-orange-600 to-orange-700 rounded-lg flex items-center justify-center mb-4 animate-float" style="animation-delay: -1.5s;">
+                            <i class="fas fa-cogs text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Gestión Operativa</h3>
+                        <p class="text-gray-600 mb-4">
+                            Soporte integral en los procesos operativos de comercio exterior.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-orange-600 text-xs"></i>
+                                <span>Programación de previos</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-orange-600 text-xs"></i>
+                                <span>Modulación de pedimentos</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-orange-600 text-xs"></i>
+                                <span>Reconocimiento Aduanero</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-orange-600 text-xs"></i>
+                                <span>Seguimiento de contenedores</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card p-6 hover-glow hover-lift animate-scale-in delay-500">
+                        <div class="w-14 h-14 bg-gradient-to-br from-red-600 to-red-700 rounded-lg flex items-center justify-center mb-4 animate-float" style="animation-delay: -2s;">
+                            <i class="fas fa-balance-scale text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Asesoría Regulatoria</h3>
+                        <p class="text-gray-600 mb-4">
+                            Asesoría especializada en normatividad aduanera y comercio exterior.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-red-600 text-xs"></i>
+                                <span>Consultas operativas</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-red-600 text-xs"></i>
+                                <span>Regulaciones no arancelarias</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-red-600 text-xs"></i>
+                                <span>Revisión de multas</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-red-600 text-xs"></i>
+                                <span>Asesoría en cuentas aduaneras</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card p-6 hover-glow hover-lift animate-scale-in delay-300">
+                        <div class="w-14 h-14 bg-gradient-to-br from-cyan-600 to-cyan-700 rounded-lg flex items-center justify-center mb-4 animate-float" style="animation-delay: -2.5s;">
+                            <i class="fas fa-laptop-code text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Soporte Técnico</h3>
+                        <p class="text-gray-600 mb-4">
+                            Soluciones tecnológicas y soporte para sistemas aduaneros.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-cyan-600 text-xs"></i>
+                                <span>Soporte Prevalidador (CAAAREM)</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-cyan-600 text-xs"></i>
+                                <span>Soporte Validador (VOCE)</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-cyan-600 text-xs"></i>
+                                <span>Soporte técnico equipos</span>
+                            </li>
+                            <li class="flex items-center gap-2 hover-lift">
+                                <i class="fas fa-chevron-right text-cyan-600 text-xs"></i>
+                                <span>Mantenimiento preventivo/correctivo</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Requisitos - Mejorado -->
+        <section id="requisitos" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4 animate-fade-in-up">Requisitos para Asociarse</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto animate-fade-in-up delay-100">
+                        Conoce los documentos y procedimientos necesarios para formar parte de AAALAC
+                    </p>
+                </div>
+                
+                <div class="max-w-6xl mx-auto">
+                    <!-- Proceso mejorado -->
+                    <div class="card p-8 mb-12 animate-scale-in">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Proceso de Admisión</h3>
+                        
+                        <div class="grid md:grid-cols-4 gap-6 mb-8">
+                            <div class="text-center group hover-lift">
+                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200 transition-colors">
+                                    <span class="text-blue-900 font-bold text-xl">1</span>
+                                </div>
+                                <p class="font-medium text-gray-900">Documentación</p>
+                                <p class="text-sm text-gray-600 mt-1">Recolectar documentos</p>
+                            </div>
+                            <div class="text-center group hover-lift">
+                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200 transition-colors">
+                                    <span class="text-blue-900 font-bold text-xl">2</span>
+                                </div>
+                                <p class="font-medium text-gray-900">Revisión</p>
+                                <p class="text-sm text-gray-600 mt-1">Evaluación de expediente</p>
+                            </div>
+                            <div class="text-center group hover-lift">
+                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200 transition-colors">
+                                    <span class="text-blue-900 font-bold text-xl">3</span>
+                                </div>
+                                <p class="font-medium text-gray-900">Entrevista</p>
+                                <p class="text-sm text-gray-600 mt-1">Reunión con comité</p>
+                            </div>
+                            <div class="text-center group hover-lift">
+                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200 transition-colors">
+                                    <span class="text-blue-900 font-bold text-xl">4</span>
+                                </div>
+                                <p class="font-medium text-gray-900">Aceptación</p>
+                                <p class="text-sm text-gray-600 mt-1">Bienvenida oficial</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tabla de requisitos mejorada -->
+                    <div class="card overflow-hidden animate-fade-in-up delay-200">
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Documento Requerido</th>
+                                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Descripción</th>
+                                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Observaciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr class="hover:bg-gray-50 transition-colors hover-lift">
+                                        <td class="px-6 py-4 font-medium text-gray-900">Carta de solicitud</td>
+                                        <td class="px-6 py-4 text-gray-600">Dirigida al Comité Ejecutivo, firmada por el Agente Aduanal</td>
+                                        <td class="px-6 py-4 text-gray-600">Incluir domicilio fiscal, teléfono para notificaciones y nombres de representantes</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors hover-lift">
+                                        <td class="px-6 py-4 font-medium text-gray-900">Publicación en DOF</td>
+                                        <td class="px-6 py-4 text-gray-600">Copia de la publicación donde se otorga la patente</td>
+                                        <td class="px-6 py-4 text-gray-600">Documento oficial del Diario Oficial de la Federación</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors hover-lift">
+                                        <td class="px-6 py-4 font-medium text-gray-900">RFC</td>
+                                        <td class="px-6 py-4 text-gray-600">Copia del Registro Federal de Contribuyentes</td>
+                                        <td class="px-6 py-4 text-gray-600">Tanto del Agente Aduanal como de la sociedad (si aplica)</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors hover-lift">
+                                        <td class="px-6 py-4 font-medium text-gray-900">CURP</td>
+                                        <td class="px-6 py-4 text-gray-600">Copia de la Clave Única de Registro de Población</td>
+                                        <td class="px-6 py-4 text-gray-600">Documento vigente del Agente Aduanal</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors hover-lift">
+                                        <td class="px-6 py-4 font-medium text-gray-900">Identificación oficial</td>
+                                        <td class="px-6 py-4 text-gray-600">Copia de identificación vigente</td>
+                                        <td class="px-6 py-4 text-gray-600">INE, pasaporte o cédula profesional</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors hover-lift">
+                                        <td class="px-6 py-4 font-medium text-gray-900">Comprobante de domicilio</td>
+                                        <td class="px-6 py-4 text-gray-600">Recibo de servicios no mayor a 3 meses</td>
+                                        <td class="px-6 py-4 text-gray-600">Luz, agua, teléfono o predial</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors hover-lift">
+                                        <td class="px-6 py-4 font-medium text-gray-900">Acta constitutiva</td>
+                                        <td class="px-6 py-4 text-gray-600">Copia del acta constitutiva de la sociedad (si aplica)</td>
+                                        <td class="px-6 py-4 text-gray-600">Con todas sus modificaciones y registro ante notario</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors hover-lift">
+                                        <td class="px-6 py-4 font-medium text-gray-900">Poder notarial</td>
+                                        <td class="px-6 py-4 text-gray-600">Copia del poder notarial para representantes legales</td>
+                                        <td class="px-6 py-4 text-gray-600">En caso de que el solicitante no sea el Agente Aduanal titular</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors hover-lift">
+                                        <td class="px-6 py-4 font-medium text-gray-900">Pago de cuotas</td>
+                                        <td class="px-6 py-4 text-gray-600">Comprobante de pago de cuotas de admisión</td>
+                                        <td class="px-6 py-4 text-gray-600">Incluye inscripción y primer mes</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Nota importante mejorada -->
+                    <div class="mt-8 p-6 bg-blue-50 rounded-xl border-l-4 border-blue-600 animate-fade-in-up delay-300">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-info-circle text-blue-600 text-xl"></i>
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="font-bold text-blue-900 mb-2">Información importante</h4>
+                                <p class="text-blue-800 text-sm leading-relaxed">
+                                    Todos los documentos deben presentarse en original para cotejo y copia simple para su archivo. 
+                                    El proceso de admisión puede tardar hasta 15 días hábiles una vez entregada la documentación completa.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Asociados - Mejorado -->
+        <section id="asociados" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <div class="inline-block mb-4">
+                        <span class="text-sm font-semibold text-blue-900 bg-blue-50 px-4 py-2 rounded-full border border-blue-200 animate-fade-in-up">
+                            <i class="fas fa-users mr-2"></i>Nuestra Comunidad
+                        </span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4 animate-fade-in-up delay-100">Agentes Aduanales Asociados</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto animate-fade-in-up delay-200">
+                        Conoce a los profesionales que forman parte de nuestra asociación y brindan servicios de calidad en el puerto de Lázaro Cárdenas
+                    </p>
+                </div>
+                
+                <!-- Estadísticas mejoradas -->
+                <div class="card p-8 mb-12 animate-scale-in">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="text-center group hover-lift">
+                            <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
+                                <i class="fas fa-building text-blue-900 text-2xl"></i>
+                            </div>
+                            <div class="counter text-3xl font-bold text-blue-900 mb-2" data-target="70">0</div>
+                            <div class="text-gray-600">Agencias Aduanales</div>
+                        </div>
+                        <div class="text-center group hover-lift">
+                            <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
+                                <i class="fas fa-users text-green-700 text-2xl"></i>
+                            </div>
+                            <div class="counter text-3xl font-bold text-green-700 mb-2" data-target="150">0</div>
+                            <div class="text-gray-600">Profesionales</div>
+                        </div>
+                        <div class="text-center group hover-lift">
+                            <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition-colors">
+                                <i class="fas fa-calendar-alt text-purple-700 text-2xl"></i>
+                            </div>
+                            <div class="counter text-3xl font-bold text-purple-700 mb-2" data-target="35">0</div>
+                            <div class="text-gray-600">Años de experiencia</div>
+                        </div>
+                        <div class="text-center group hover-lift">
+                            <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-200 transition-colors">
+                                <i class="fas fa-clock text-orange-700 text-2xl"></i>
+                            </div>
+                            <div class="text-3xl font-bold text-orange-700 mb-2">24/7</div>
+                            <div class="text-gray-600">Servicio disponible</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA mejorado -->
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 animate-fade-in-up">¿Buscas un agente aduanal?</h3>
+                    <p class="text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-100">
+                        Explora nuestro directorio completo de agentes aduanales asociados y encuentra el profesional ideal para tus necesidades de comercio exterior.
+                    </p>
+                    <a href="https://plataforma.aaalac.mx/publicidad" target="_blank" class="btn inline-flex items-center px-8 py-4 bg-blue-900 text-white rounded-lg font-semibold hover:bg-blue-800 hover-lift focus:ring-primary animate-fade-in-up delay-200">
+                        <i class="fas fa-book-open mr-2"></i> Ver Directorio Completo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto con formulario -->
+        <section id="contacto" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <div class="inline-block mb-4">
+                        <span class="text-sm font-semibold text-blue-900 bg-blue-50 px-4 py-2 rounded-full border border-blue-200 animate-fade-in-up">
+                            <i class="fas fa-envelope mr-2"></i>Comunícate con nosotros
+                        </span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4 animate-fade-in-up delay-100">Contáctanos</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto animate-fade-in-up delay-200">
+                        Estamos aquí para ayudarte. Envíanos tus dudas o comentarios y te responderemos a la brevedad.
+                    </p>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                    <!-- Información de contacto -->
+                    <div class="animate-fade-in-left">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Información de Contacto</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start hover-lift">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-blue-900"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Dirección</h4>
+                                    <p class="text-gray-600">Salvias 149, Col. Jardines<br>Lázaro Cárdenas, Michoacán</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start hover-lift">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone text-blue-900"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Teléfono</h4>
+                                    <p class="text-gray-600">753 537 2001</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start hover-lift">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-blue-900"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Email</h4>
+                                    <p class="text-gray-600">info@aaalac.mx</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start hover-lift">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-clock text-blue-900"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Horario de Atención</h4>
+                                    <p class="text-gray-600">Lunes a Viernes: 8:30 AM - 6:30 PM<br>Sábados: 10:00 AM - 2:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Redes sociales -->
+                        <div class="mt-8">
+                            <h4 class="font-semibold text-gray-900 mb-4">Síguenos en redes sociales</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-100 transition-colors hover-lift">
+                                    <i class="fab fa-facebook-f text-blue-900"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-100 transition-colors hover-lift">
+                                    <i class="fab fa-instagram text-blue-900"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Formulario de contacto -->
+                    <div class="animate-fade-in-right">
+                        <div class="bg-gray-50 rounded-2xl p-8">
+                            <h3 class="text-xl font-bold text-gray-900 mb-6">Envíanos un mensaje</h3>
+                            
+                            <form id="contactForm" class="space-y-6">
+                                <div class="relative">
+                                    <input type="text" id="name" class="form-input w-full px-4 py-3 rounded-lg" placeholder=" " required>
+                                    <label for="name" class="form-label absolute left-4 top-3 text-gray-500 pointer-events-none">Nombre completo</label>
+                                </div>
+                                
+                                <div class="relative">
+                                    <input type="email" id="email" class="form-input w-full px-4 py-3 rounded-lg" placeholder=" " required>
+                                    <label for="email" class="form-label absolute left-4 top-3 text-gray-500 pointer-events-none">Correo electrónico</label>
+                                </div>
+                                
+                                <div class="relative">
+                                    <input type="tel" id="phone" class="form-input w-full px-4 py-3 rounded-lg" placeholder=" ">
+                                    <label for="phone" class="form-label absolute left-4 top-3 text-gray-500 pointer-events-none">Teléfono (opcional)</label>
+                                </div>
+                                
+                                <div class="relative">
+                                    <select id="subject" class="form-input w-full px-4 py-3 rounded-lg appearance-none text-gray-500" required>
+                                        <option value="" selected disabled></option>
+                                        <option value="info">Solicitud de información</option>
+                                        <option value="membership">Afiliación a AAALAC</option>
+                                        <option value="complaint">Queja o sugerencia</option>
+                                        <option value="other">Otro asunto</option>
+                                    </select>
+                                    <label for="subject" class="form-label absolute left-4 top-3 text-gray-500 pointer-events-none">Asunto</label>
+                                    <i class="fas fa-chevron-down absolute right-4 top-4 text-gray-400 pointer-events-none"></i>
+                                </div>
+                                
+                                <div class="relative">
+                                    <textarea id="message" rows="5" class="form-input w-full px-4 py-3 rounded-lg" placeholder=" " required></textarea>
+                                    <label for="message" class="form-label absolute left-4 top-3 text-gray-500 pointer-events-none">Mensaje</label>
+                                </div>
+                                
+                                <button type="submit" class="btn w-full py-3 bg-blue-900 text-white rounded-lg font-semibold hover:bg-blue-800 transition-colors focus:ring-primary">
+                                    <i class="fas fa-paper-plane mr-2"></i> Enviar mensaje
+                                </button>
+                            </form>
+                            
+                            <div id="formMessage" class="mt-4 hidden p-4 rounded-lg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa de ubicación -->
+        <div class="bg-gray-100 py-8">
+            <div class="container mx-auto px-4">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <iframe 
+                        class="w-full h-64" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3795.222020533842!2d-102.21147372439725!3d17.96840468580685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84315c689ecbe9eb%3A0x467f535c1cc75a9a!2sAsociaci%C3%B3n%20de%20Agentes%20Aduanales%20de%20L%C3%A1zaro%20C%C3%A1rdenas!5e0!3m2!1ses-419!2smx!4v1757632622209!5m2!1ses-419!2smx" 
+                        width="100%" 
+                        height="256" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer simplificado para la landing -->
+        <footer class="py-12 bg-gray-900 text-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-lg flex items-center justify-center">
+                            <img src="./img/Isotipo.png" alt="Isotipo de AAALAC" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <h3 class="font-bold">AAALAC</h3>
+                            <p class="text-xs text-gray-400">Asociación de Agentes Aduanales de Lázaro Cárdenas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center md:text-left">
+                        <p class="text-gray-400 text-sm">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Salvias 149, Col. Jardines, Lázaro Cárdenas, Mich.
+                        </p>
+                        <p class="text-gray-400 text-sm mt-1">
+                            <i class="fas fa-phone mr-2"></i>
+                            753 537 2001
+                        </p>
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors hover-lift">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors hover-lift">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+                    <p>&copy; 2025 AAALAC. Todos los derechos reservados. | 
+                        <a href="#" class="hover:text-white transition-colors">Aviso de Privacidad</a> | 
+                        <a href="#" class="hover:text-white transition-colors">Términos y Condiciones</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="./js/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAALAC - Servicios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Animaciones sutiles */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .animate-fadeIn {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        
+        .animate-slideUp {
+            animation: slideUp 0.7s ease-out forwards;
+        }
+        
+        .animate-slideInLeft {
+            animation: slideInLeft 0.6s ease-out forwards;
+        }
+        
+        .animate-slideInRight {
+            animation: slideInRight 0.6s ease-out forwards;
+        }
+        
+        /* Delays para animaciones secuenciales */
+        .delay-100 { animation-delay: 0.1s; opacity: 0; }
+        .delay-200 { animation-delay: 0.2s; opacity: 0; }
+        .delay-300 { animation-delay: 0.3s; opacity: 0; }
+        .delay-400 { animation-delay: 0.4s; opacity: 0; }
+        .delay-500 { animation-delay: 0.5s; opacity: 0; }
+        .delay-600 { animation-delay: 0.6s; opacity: 0; }
+        
+        /* Hover effects profesionales */
+        .service-card {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .service-card:hover::before {
+            left: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Gradientes profesionales */
+        .gradient-blue {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        }
+        
+        .gradient-dark {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        }
+        
+        /* Tabs personalización */
+        .tab-button {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-button::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: #1e3a8a;
+            transition: width 0.3s ease;
+        }
+        
+        .tab-button.active::after,
+        .tab-button:hover::after {
+            width: 100%;
+        }
+        
+        .tab-button.active {
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+        
+        /* Icon animation */
+        .icon-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .icon-hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        /* List items con animación */
+        .list-item {
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .list-item::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #1e3a8a;
+            transition: transform 0.3s ease;
+        }
+        
+        .list-item:hover::before {
+            transform: translateX(3px);
+        }
+        
+        /* Progress steps */
+        .step-connector {
+            background: linear-gradient(90deg, #1e3a8a 50%, #cbd5e1 50%);
+            background-size: 20px 2px;
+            animation: moveBackground 1s linear infinite paused;
+        }
+        
+        @keyframes moveBackground {
+            0% { background-position: 0 0; }
+            100% { background-position: 20px 0; }
+        }
+        
+        .step-connector.active {
+            animation-play-state: running;
+        }
+        
+        /* Badge styles */
+        .badge-new {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ef4444;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #1e3a8a;
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1e40af;
+        }
+        
+        /* Accordion styles */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .accordion-content.active {
+            max-height: 500px;
+            transition: max-height 0.5s ease-in;
+        }
+        
+        /* Pattern background */
+        .pattern-bg {
+            background-color: #f8fafc;
+            background-image: 
+                linear-gradient(30deg, #f0f9ff 12%, transparent 12.5%, transparent 87%, #f0f9ff 87.5%, #f0f9ff),
+                linear-gradient(150deg, #f0f9ff 12%, transparent 12.5%, transparent 87%, #f0f9ff 87.5%, #f0f9ff),
+                linear-gradient(30deg, #f0f9ff 12%, transparent 12.5%, transparent 87%, #f0f9ff 87.5%, #f0f9ff),
+                linear-gradient(150deg, #f0f9ff 12%, transparent 12.5%, transparent 87%, #f0f9ff 87.5%, #f0f9ff);
+            background-size: 40px 70px;
+            background-position: 0 0, 0 0, 20px 35px, 20px 35px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header (reutilizado) -->
+    <header class="fixed top-0 w-full bg-white shadow-sm z-40 transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-14 h-14 gradient-blue rounded-lg flex items-center justify-center shadow-md">
+                        <i class="fas fa-ship text-white text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900">AAALAC</h1>
+                        <p class="text-xs text-gray-600">Agentes Aduanales LC</p>
+                    </div>
+                </div>
+                
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-blue-900 font-medium transition-colors">Inicio</a>
+                    <a href="#nosotros" class="text-gray-700 hover:text-blue-900 font-medium transition-colors">Nosotros</a>
+                    <a href="#servicios" class="text-blue-900 font-medium border-b-2 border-blue-900">Servicios</a>
+                    <a href="#requisitos" class="text-gray-700 hover:text-blue-900 font-medium transition-colors">Requisitos</a>
+                    <a href="#asociados" class="text-gray-700 hover:text-blue-900 font-medium transition-colors">Asociados</a>
+                    <a href="#contacto" class="text-gray-700 hover:text-blue-900 font-medium transition-colors">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section - Servicios -->
+    <section class="pt-32 pb-16 pattern-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-block mb-4 animate-fadeIn">
+                    <span class="text-sm font-semibold text-blue-900 bg-blue-50 px-4 py-2 rounded-full">
+                        <i class="fas fa-award mr-2"></i>Servicios Certificados ISO 9001:2015
+                    </span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 animate-fadeIn delay-100">
+                    Servicios <span class="gradient-blue bg-clip-text text-transparent">Aduanales Integrales</span>
+                </h1>
+                <p class="text-lg text-gray-600 leading-relaxed animate-fadeIn delay-200">
+                    Ofrecemos soluciones completas para optimizar sus operaciones de comercio exterior, 
+                    garantizando eficiencia, seguridad y cumplimiento normativo en cada proceso.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Principales -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Servicios Principales</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Cubrimos todas las necesidades de importación y exportación con el respaldo de más de 70 agencias especializadas
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1: Despacho Aduanal -->
+                <div class="service-card bg-white border border-gray-200 rounded-xl p-6 hover:border-blue-300 animate-slideUp">
+                    <div class="w-14 h-14 gradient-blue rounded-lg flex items-center justify-center mb-4 icon-hover">
+                        <i class="fas fa-file-invoice text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Despacho Aduanal</h3>
+                    <p class="text-gray-600 mb-4">
+                        Gestión completa de trámites aduaneros para importación y exportación de mercancías.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="list-item">Clasificación arancelaria</li>
+                        <li class="list-item">Elaboración de pedimentos</li>
+                        <li class="list-item">Pago de impuestos</li>
+                        <li class="list-item">Liberación de mercancías</li>
+                    </ul>
+                    <button class="mt-4 text-blue-900 font-semibold text-sm hover:text-blue-700 transition-colors">
+                        Ver más detalles <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <!-- Servicio 2: Consultoría -->
+                <div class="service-card bg-white border border-gray-200 rounded-xl p-6 hover:border-blue-300 animate-slideUp delay-100">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center mb-4 icon-hover">
+                        <i class="fas fa-lightbulb text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Consultoría Especializada</h3>
+                    <p class="text-gray-600 mb-4">
+                        Asesoría experta en comercio exterior y normatividad aduanera actualizada.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="list-item">Análisis de regulaciones</li>
+                        <li class="list-item">Optimización fiscal</li>
+                        <li class="list-item">Cumplimiento normativo</li>
+                        <li class="list-item">Estrategias de importación</li>
+                    </ul>
+                    <button class="mt-4 text-blue-900 font-semibold text-sm hover:text-blue-700 transition-colors">
+                        Ver más detalles <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <!-- Servicio 3: Logística -->
+                <div class="service-card bg-white border border-gray-200 rounded-xl p-6 hover:border-blue-300 animate-slideUp delay-200">
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg flex items-center justify-center mb-4 icon-hover">
+                        <i class="fas fa-truck text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Logística Integral</h3>
+                    <p class="text-gray-600 mb-4">
+                        Coordinación completa de transporte y almacenamiento de mercancías.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="list-item">Transporte multimodal</li>
+                        <li class="list-item">Almacenaje temporal</li>
+                        <li class="list-item">Distribución nacional</li>
+                        <li class="list-item">Seguimiento en tiempo real</li>
+                    </ul>
+                    <button class="mt-4 text-blue-900 font-semibold text-sm hover:text-blue-700 transition-colors">
+                        Ver más detalles <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <!-- Servicio 4: Certificaciones -->
+                <div class="service-card bg-white border border-gray-200 rounded-xl p-6 hover:border-blue-300 animate-slideUp delay-300">
+                    <div class="position-relative">
+                        <span class="badge-new">NUEVO</span>
+                        <div class="w-14 h-14 bg-gradient-to-br from-orange-600 to-orange-700 rounded-lg flex items-center justify-center mb-4 icon-hover">
+                            <i class="fas fa-certificate text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Certificaciones OEA</h3>
+                    <p class="text-gray-600 mb-4">
+                        Apoyo en obtención y mantenimiento de certificación como Operador Económico Autorizado.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="list-item">Diagnóstico inicial</li>
+                        <li class="list-item">Implementación de requisitos</li>
+                        <li class="list-item">Auditorías internas</li>
+                        <li class="list-item">Gestión ante SAT</li>
+                    </ul>
+                    <button class="mt-4 text-blue-900 font-semibold text-sm hover:text-blue-700 transition-colors">
+                        Ver más detalles <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <!-- Servicio 5: Representación -->
+                <div class="service-card bg-white border border-gray-200 rounded-xl p-6 hover:border-blue-300 animate-slideUp delay-400">
+                    <div class="w-14 h-14 bg-gradient-to-br from-red-600 to-red-700 rounded-lg flex items-center justify-center mb-4 icon-hover">
+                        <i class="fas fa-balance-scale text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Representación Legal</h3>
+                    <p class="text-gray-600 mb-4">
+                        Defensa jurídica ante autoridades aduaneras y resolución de controversias.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="list-item">Recursos administrativos</li>
+                        <li class="list-item">Procedimientos PAMA</li>
+                        <li class="list-item">Atención de requerimientos</li>
+                        <li class="list-item">Defensa legal aduanera</li>
+                    </ul>
+                    <button class="mt-4 text-blue-900 font-semibold text-sm hover:text-blue-700 transition-colors">
+                        Ver más detalles <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <!-- Servicio 6: Tecnología -->
+                <div class="service-card bg-white border border-gray-200 rounded-xl p-6 hover:border-blue-300 animate-slideUp delay-500">
+                    <div class="w-14 h-14 bg-gradient-to-br from-cyan-600 to-cyan-700 rounded-lg flex items-center justify-center mb-4 icon-hover">
+                        <i class="fas fa-laptop-code text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Soluciones Digitales</h3>
+                    <p class="text-gray-600 mb-4">
+                        Plataforma tecnológica para gestión y seguimiento de operaciones aduaneras.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="list-item">Portal web 24/7</li>
+                        <li class="list-item">Tracking en tiempo real</li>
+                        <li class="list-item">Documentación digital</li>
+                        <li class="list-item">Reportes automatizados</li>
+                    </ul>
+                    <button class="mt-4 text-blue-900 font-semibold text-sm hover:text-blue-700 transition-colors">
+                        Ver más detalles <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Especializados por Industria -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Especialización por Industria</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Experiencia específica en los sectores más importantes del comercio exterior
+                </p>
+            </div>
+            
+            <!-- Tabs de industrias -->
+            <div class="max-w-5xl mx-auto">
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <button class="tab-button active px-6 py-3 bg-white rounded-lg font-medium text-gray-700 hover:text-blue-900 transition-colors" data-tab="automotriz">
+                        <i class="fas fa-car mr-2"></i>Automotriz
+                    </button>
+                    <button class="tab-button px-6 py-3 bg-white rounded-lg font-medium text-gray-700 hover:text-blue-900 transition-colors" data-tab="mineria">
+                        <i class="fas fa-gem mr-2"></i>Minería
+                    </button>
+                    <button class="tab-button px-6 py-3 bg-white rounded-lg font-medium text-gray-700 hover:text-blue-900 transition-colors" data-tab="agricultura">
+                        <i class="fas fa-seedling mr-2"></i>Agricultura
+                    </button>
+                    <button class="tab-button px-6 py-3 bg-white rounded-lg font-medium text-gray-700 hover:text-blue-900 transition-colors" data-tab="tecnologia">
+                        <i class="fas fa-microchip mr-2"></i>Tecnología
+                    </button>
+                    <button class="tab-button px-6 py-3 bg-white rounded-lg font-medium text-gray-700 hover:text-blue-900 transition-colors" data-tab="energia">
+                        <i class="fas fa-bolt mr-2"></i>Energía
+                    </button>
+                </div>
+                
+                <!-- Contenido de tabs -->
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <!-- Tab Automotriz -->
+                    <div class="tab-content" id="automotriz">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                                    <i class="fas fa-car text-blue-900 mr-3"></i>Sector Automotriz
+                                </h3>
+                                <p class="text-gray-600 mb-6">
+                                    Especialistas en el manejo de autopartes, vehículos terminados y componentes de la industria automotriz con los más altos estándares de calidad.
+                                </p>
+                                <div class="space-y-3">
+                                    <div class="flex items-start gap-3">
+                                        <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                                        <div>
+                                            <strong>PROSEC Automotriz:</strong> Gestión de programas sectoriales
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                                        <div>
+                                            <strong>IMMEX:</strong> Administración de programas de manufactura
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                                        <div>
+                                            <strong>Regla 8va:</strong> Importación temporal de contenedores
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                                        <div>
+                                            <strong>Just in Time:</strong> Entregas sincronizadas con producción
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 text-center">
+                                <i class="fas fa-industry text-6xl text-blue-900 mb-4"></i>
+                                <p class="text-3xl font-bold text-blue-900">15+</p>
+                                <p class="text-gray-700">Años de experiencia en el sector</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab Minería (oculto por defecto) -->
+                    <div class="tab-content hidden" id="mineria">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                                    <i class="fas fa-gem text-blue-900 mr-3"></i>Sector Minero
+                                </h3>
+                                <p class="text-gray-600 mb-6">
+                                    Manejo especializado de minerales, metales y equipos de extracción con estricto cumplimiento de regulaciones ambientales y de seguridad.
+                                </p>
+                                <div class="space-y-3">
+                                    <div class="flex items-start gap-3">
+                                        <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                                        <div>
+                                            <strong>Minerales estratégicos:</strong> Hierro, cobre, zinc y otros
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                                        <div>
+                                            <strong>Maquinaria pesada:</strong> Importación de equipos especializados
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                                        <div>
+                                            <strong>Permisos especiales:</strong> SEMARNAT, SE, SSA
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 text-center">
+                                <i class="fas fa-mountain text-6xl text-green-700 mb-4"></i>
+                                <p class="text-3xl font-bold text-green-700">500K+</p>
+                                <p class="text-gray-700">Toneladas anuales procesadas</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Otros tabs siguiendo el mismo patrón... -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso de Servicio -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Nuestro Proceso de Trabajo</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Metodología probada para garantizar eficiencia y transparencia en cada operación
+                </p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="relative">
+                    <!-- Línea conectora -->
+                    <div class="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gray-300 -translate-y-1/2"></div>
+                    <div class="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 step-connector -translate-y-1/2"></div>
+                    
+                    <!-- Steps -->
+                    <div class="grid md:grid-cols-5 gap-8 relative">
+                        <!-- Step 1 -->
+                        <div class="text-center relative">
+                            <div class="w-16 h-16 gradient-blue rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4 relative z-10 bg-white">
+                                1
+                            </div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Consulta Inicial</h4>
+                            <p class="text-sm text-gray-600">Análisis de necesidades y requerimientos</p>
+                        </div>
+                        
+                        <!-- Step 2 -->
+                        <div class="text-center relative">
+                            <div class="w-16 h-16 gradient-blue rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4 relative z-10">
+                                2
+                            </div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Planeación
+</body>
+</html>

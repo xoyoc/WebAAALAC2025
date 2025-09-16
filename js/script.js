@@ -24,6 +24,9 @@ class AAALACWebsite {
     /**
      * Setup all event listeners
      */
+    
+    
+    
     setupEventListeners() {
         // Mobile menu
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -35,11 +38,9 @@ class AAALACWebsite {
             
             if (isActive) {
                 mobileMenu.classList.remove('active');
-                mobileMenu.classList.add('hidden');
                 if (menuIcon) menuIcon.className = 'fas fa-bars';
             } else {
                 mobileMenu.classList.add('active');
-                mobileMenu.classList.remove('hidden');
                 if (menuIcon) menuIcon.className = 'fas fa-times';
             }
         });

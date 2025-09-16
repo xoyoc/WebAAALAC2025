@@ -274,12 +274,15 @@
 
 /* Enhanced mobile menu */
 .mobile-menu {
-    transform: translateY(-100%);
-    transition: transform var(--transition-normal);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    opacity: 0;
 }
 
 .mobile-menu.active {
-    transform: translateY(0);
+    max-height: 600px; /* Ajusta según el contenido */
+    opacity: 1;
 }
 
 /* ===========================
@@ -380,6 +383,41 @@
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
+
+/* Service cards hover text fix */
+.service-card:hover,
+.card:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.service-card:hover h3,
+.service-card:hover p,
+.service-card:hover i,
+.service-card:hover span,
+.card:hover h3,
+.card:hover h4,
+.card:hover p,
+.card:hover li {
+    color: white !important;
+}
+
+/* Para las tarjetas con hover-glow */
+.hover-glow:hover {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    color: white;
+}
+
+.hover-glow:hover * {
+    color: white !important;
+}
+
+/* Ajuste específico para íconos en hover */
+.hover-glow:hover .fas,
+.hover-glow:hover .fab {
+    color: white !important;
+}
+
 
 .agent-card {
     transition: all 0.3s ease;
